@@ -1,8 +1,9 @@
 {
   "name": "schema-to-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/schema-to-ts.cjs.js",
-  "module": "dist/schema-to-ts.esm.js",
+  "module": "dist/schema-to-ts.es.js",
+  "type": "module",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "vite build",
@@ -19,6 +20,7 @@
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5",
     "ts-loader": "^9.5.1",
-    "vite": "^6.0.7"
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^4.4.0"
   }
 }

@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 import { createRequire } from 'module';
-
+import dts from 'vite-plugin-dts';
 
 // Create a require function to resolve paths like CommonJS
 const require = createRequire(import.meta.url);
@@ -13,6 +13,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'schema-to-ts',
       fileName: (format) => `schema-to-ts.${format}.js`,
+      formats: ['es', 'cjs', 'umd'],
     },
     rollupOptions: {
       treeshake: 'smallest'
@@ -37,5 +38,10 @@ export default defineConfig({
   optimizeDeps: {
     include: ['stream-browserify', 'url', 'buffer'],  // Include these modules for dependency optimization
   },
+  plugins: [
+    dts({
+      insertTypesEntry: true, // Generate a `package.json` entry for types
+    }),
+  ],
   mode: 'production',  // Switch to 'development' for debugging
 });
