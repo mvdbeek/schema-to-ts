@@ -11,8 +11,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'openapiToTsInterface',
-      fileName: (format) => `openapi-to-ts-interface.${format}.js`,
+      name: 'schema-to-ts',
+      fileName: (format) => `schema-to-ts.${format}.js`,
     },
     rollupOptions: {
       treeshake: 'smallest'

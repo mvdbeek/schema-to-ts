@@ -1,8 +1,8 @@
 {
-  "name": "openapi-to-ts-interface",
+  "name": "schema-to-ts",
   "version": "0.0.1",
-  "main": "dist/openapi-to-ts-interface.cjs.js",
-  "module": "dist/openapi-to-ts-interface.esm.js",
+  "main": "dist/schema-to-ts.cjs.js",
+  "module": "dist/schema-to-ts.esm.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "vite build",
